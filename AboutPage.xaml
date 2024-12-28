@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Vkusnyashka1.Pages.AboutPage"
+             BackgroundColor="#F9F9F9">
+
+    <AbsoluteLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+
+        <!-- Основной скролируемый контент -->
+        <ScrollView AbsoluteLayout.LayoutBounds="0,0,1,1"
+                    AbsoluteLayout.LayoutFlags="All">
+            <StackLayout Padding="20,80,20,20" Spacing="20">
+
+                <!-- Заголовок -->
+                <Label Text="ИНФОРМАЦИЯ О НАС" 
+                       FontAttributes="Bold"
+                       FontSize="Large"
+                       TextColor="Black"/>
+
+                <!-- Адрес и метрополитен -->
+                <StackLayout Spacing="10">
+                    <StackLayout Orientation="Horizontal" Spacing="10">
+                        <Image Source="location_icon.png" WidthRequest="24" HeightRequest="24"/>
+                        <Label Text="Москва,\nОвчинниковская набережная, 20с2\nМетро - Новокузнецкая" 
+                               VerticalOptions="Center"
+                               TextColor="Black"
+                               FontSize="Medium"/>
+                    </StackLayout>
+                </StackLayout>
+
+                <!-- Изображение карты (замените map_image.png на вашу карту) -->
+                <Image Source="map_image.png" Aspect="AspectFill" HeightRequest="200"/>
+
+                <!-- Контакты: Телефон и Почта -->
+                <StackLayout Spacing="10">
+                    <StackLayout Orientation="Horizontal" Spacing="10">
+                        <Image Source="phone_icon.png" WidthRequest="24" HeightRequest="24"/>
+                        <Label Text="Телефон: +7 (917) 234 26 90"
+                               VerticalOptions="Center"
+                               TextColor="Black"
+                               FontSize="Medium"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" Spacing="10">
+                        <Image Source="email_icon.png" WidthRequest="24" HeightRequest="24"/>
+                        <Label Text="Почта: vkusnyashka@gmail.com"
+                               VerticalOptions="Center"
+                               TextColor="Black"
+                               FontSize="Medium"/>
+                    </StackLayout>
+                </StackLayout>
+
+            </StackLayout>
+        </ScrollView>
+
+        <!-- Верхняя панель -->
+        <StackLayout Orientation="Horizontal"
+                     Padding="20,40,20,0"
+                     AbsoluteLayout.LayoutBounds="0,0,1,0.1"
+                     AbsoluteLayout.LayoutFlags="WidthProportional"
+                     VerticalOptions="Start"
+                     HorizontalOptions="FillAndExpand"
+                     BackgroundColor="#F9F9F9"
+                     Spacing="10">
+
+            <!-- Гамбургер-иконка слева -->
+            <Label Text="≡"
+                   FontSize="Large"
+                   VerticalOptions="Center"
+                   TextColor="Black">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnHamburgerTapped" NumberOfTapsRequired="1"/>
+                </Label.GestureRecognizers>
+            </Label>
+        </StackLayout>
+    </AbsoluteLayout>
+
+</ContentPage>

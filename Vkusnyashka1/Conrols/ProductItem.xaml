@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Vkusnyashka1.Controls.ProductItem">
+
+    <Frame CornerRadius="10" Padding="5" HasShadow="False" BackgroundColor="White">
+        <StackLayout Spacing="5" Padding="5">
+            <!-- Изображение товара -->
+            <Image Source="{Binding ImageSource}" HeightRequest="120" Aspect="AspectFill"/>
+
+            <!-- Название товара -->
+            <Label Text="{Binding Title}" HorizontalOptions="Center" FontAttributes="Bold" FontSize="Medium"/>
+
+            <!-- Кнопки + и -, а также количество -->
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="10">
+                <Button Text="-" FontSize="20" Command="{Binding OnRemove}" CommandParameter="{Binding Title}"/>
+                <Label Text="{Binding Quantity}" FontSize="20" VerticalOptions="Center"/>
+                <Button Text="+" FontSize="20" Command="{Binding OnAdd}" CommandParameter="{Binding Title}"/>
+            </StackLayout>
+        </StackLayout>
+    </Frame>
+</ContentView>

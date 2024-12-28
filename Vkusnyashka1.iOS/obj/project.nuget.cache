@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "6z4GiH1v49U=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\zhuko\\source\\repos\\Vkusnyashka1\\Vkusnyashka1.iOS\\Vkusnyashka1.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\zhuko\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\zhuko\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
+    "C:\\Users\\zhuko\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
+  ],
+  "logs": []
+}
